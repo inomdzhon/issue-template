@@ -1,0 +1,10 @@
+{
+  "name": "Issue Template",
+  "version": "0.1",
+  "description": "Templates for issues with 2 click",
+  "permissions": ["contextMenus", "activeTab"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "manifest_version": 2
+}

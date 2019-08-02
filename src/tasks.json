@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "type": "tasks-for-backend",
+      "fields": [
+        {
+          "title": "Что было затронуто кроме основной задачи?",
+          "content": [{
+            "type": "text",
+            "value": "..."
+          }],
+          "required": false
+        },
+        {
+          "title": "Что мы не сделали или сделали по-другому?",
+          "content": [{
+            "type": "text",
+            "value": "..."
+          }],
+          "required": false
+        },
+        {
+          "title": "На что уделить особое внимание?",
+          "content": [{
+            "type": "text",
+            "value": "..."
+          }, {
+            "type": "list",
+            "value": ""
+          }],
+          "required": false
+        },
+        {
+          "title": "Как собрать сборку?",
+          "content": [{
+            "type": "text",
+            "value": "..."
+          }],
+          "required": false
+        }
+      ]
+    }
+  ]
+}

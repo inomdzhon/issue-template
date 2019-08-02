@@ -1,0 +1,21 @@
+{
+  "name": "issue-template",
+  "version": "1.0.0",
+  "description": "Templates for issues for two click",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "issue",
+    "template",
+    "jira"
+  ],
+  "author": "Inomdzhon Mirdzhamolov",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^1.17.0",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-typescript2": "^0.22.1",
+    "typescript": "^3.5.3"
+  }
+}
