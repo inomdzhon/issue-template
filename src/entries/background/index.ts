@@ -62,7 +62,7 @@ function getBugTemplate() {
 `;
 }
 
-function getScriptOfTemplateInjectAsString(template) {
+function getScriptOfTemplateInjectAsString(template: string) {
   return `
 var editableField = '';
 
@@ -81,7 +81,9 @@ function handleInstalled() {
     title: "Backend",
     contexts: ["editable"],
     onclick(_info, tab) {
-      chrome.tabs.executeScript(tab.id, { code: getScriptOfTemplateInjectAsString(getTaskTemplateForBackend()) });
+      if (tab.id) {
+        chrome.tabs.executeScript(tab.id, { code: getScriptOfTemplateInjectAsString(getTaskTemplateForBackend()) });
+      }
     }
   });
 
@@ -89,7 +91,9 @@ function handleInstalled() {
     title: "Frontend",
     contexts: ["editable"],
     onclick(_info, tab) {
-      chrome.tabs.executeScript(tab.id, { code: getScriptOfTemplateInjectAsString(getTaskTemplateFrontend()) });
+      if (tab.id) {
+        chrome.tabs.executeScript(tab.id, { code: getScriptOfTemplateInjectAsString(getTaskTemplateFrontend()) });
+      }
     }
   });
 
@@ -97,7 +101,9 @@ function handleInstalled() {
     title: "Mobile",
     contexts: ["editable"],
     onclick(_info, tab) {
-      chrome.tabs.executeScript(tab.id, { code: getScriptOfTemplateInjectAsString(getTaskTemplateForMobile()) });
+      if (tab.id) {
+        chrome.tabs.executeScript(tab.id, { code: getScriptOfTemplateInjectAsString(getTaskTemplateForMobile()) });
+      }
     }
   });
 
@@ -105,9 +111,13 @@ function handleInstalled() {
     title: "Bug",
     contexts: ["editable"],
     onclick(_info, tab) {
-      chrome.tabs.executeScript(tab.id, { code: getScriptOfTemplateInjectAsString(getBugTemplate()) });
+      if (tab.id) {
+        chrome.tabs.executeScript(tab.id, { code: getScriptOfTemplateInjectAsString(getBugTemplate()) });
+      }
     }
   });
 }
+
+export class MyClass {}
 
 chrome.runtime.onInstalled.addListener(handleInstalled);

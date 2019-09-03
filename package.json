@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Templates for issues for two click",
   "scripts": {
-    "build": "rollup -c"
+    "build": "NODE_ENV=production webpack --config=webpack.config.prod.js --progress",
+    "start": "node scripts/start.js"
   },
   "keywords": [
     "issue",
@@ -13,9 +14,26 @@
   "author": "Inomdzhon Mirdzhamolov",
   "license": "MIT",
   "devDependencies": {
-    "rollup": "^1.17.0",
-    "rollup-plugin-copy": "^3.1.0",
-    "rollup-plugin-typescript2": "^0.22.1",
-    "typescript": "^3.5.3"
+    "@types/chrome": "0.0.88",
+    "cache-loader": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.6.2",
+    "typescript-plugin-css-modules": "^1.2.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   }
 }
