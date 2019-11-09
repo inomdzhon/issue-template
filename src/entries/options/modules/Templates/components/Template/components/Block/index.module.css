@@ -1,0 +1,15 @@
+.root {
+  position: relative;
+  padding: 8px;
+  background: #e4e4e4;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+.removeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}

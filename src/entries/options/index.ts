@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import classes from './index.module.css';
+import App from './App';
 
-ReactDOM.render(React.createElement('div', { className: classes.test }), document.getElementById('app'));
+ReactDOM.render(React.createElement(App), document.getElementById('app'));

@@ -1,4 +1,6 @@
 {
+  "buildOnSave": false,
+  "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "src",
     "target": "esnext",
@@ -20,13 +22,17 @@
     ],
     "plugins": [
       {
-        "name": "typescript-plugin-css-modules"
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "classnameTransform": "camelCaseOnly",
+          "customMatcher": "\\.module\\.css$"
+        }
       }
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx"
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
   ],
   "exclude": [
     "node_modules"

@@ -8,5 +8,4 @@ module.exports = {
   watchContentBase: true,
   hot: true,
   publicPath: '/',
-  quiet: true,
 };

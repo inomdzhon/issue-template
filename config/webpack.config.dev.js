@@ -14,6 +14,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  watch: true,
   devtool: 'cheap-module-eval-source-map',
   entry: {
     background: resolveApp('src/entries/background/index.ts'),
